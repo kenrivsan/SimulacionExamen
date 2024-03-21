@@ -98,17 +98,18 @@ namespace SimulacionExamen
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            dtvNomTemp.DataSource = null;
+            temperatura2.Clear();
             foreach (clsDepartamento departamentos in departamento)
             {
                 clsTemperatura temp = temperatura.FirstOrDefault(p => p.NoIdentificacion == departamentos.NoIdentificacion);
-                if(temperatura != null)
+                
+                if (temperatura != null)
                 {
                     clsNombreTemp reporte = new clsNombreTemp
                     {
                         Nombre = departamentos.Nombre,
-                        Temperatura = temp.Temperatura,
-                        
+                        Temperatura = temp.Temperatura,  
                     };
                     temperatura2.Add(reporte);
                 }
