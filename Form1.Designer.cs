@@ -41,6 +41,7 @@ namespace SimulacionExamen
             this.dtvTemperaturas = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.dtvNomTemp = new System.Windows.Forms.DataGridView();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvDepartamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvTemperaturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtvNomTemp)).BeginInit();
@@ -138,7 +139,7 @@ namespace SimulacionExamen
             // 
             this.button1.Location = new System.Drawing.Point(12, 513);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(90, 28);
             this.button1.TabIndex = 12;
             this.button1.Text = "Mostrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -154,11 +155,22 @@ namespace SimulacionExamen
             this.dtvNomTemp.Size = new System.Drawing.Size(541, 207);
             this.dtvNomTemp.TabIndex = 13;
             // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Location = new System.Drawing.Point(12, 547);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(173, 30);
+            this.btnOrdenar.TabIndex = 14;
+            this.btnOrdenar.Text = "Ordenar ascendentes";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 704);
+            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.dtvNomTemp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtvTemperaturas);
@@ -196,6 +208,7 @@ namespace SimulacionExamen
         private System.Windows.Forms.DataGridView dtvTemperaturas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dtvNomTemp;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }
 

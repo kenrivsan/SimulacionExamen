@@ -117,5 +117,16 @@ namespace SimulacionExamen
             dtvNomTemp.DataSource = temperatura2;
             dtvNomTemp.Refresh();
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            dtvNomTemp.DataSource = null;
+            temperatura2 = temperatura2.OrderBy(p => p.Temperatura).ToList();
+
+
+            dtvNomTemp.DataSource = null;
+            dtvNomTemp.DataSource = temperatura2;
+            dtvNomTemp.Refresh();
+        }
     }
 }
