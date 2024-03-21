@@ -37,13 +37,13 @@ namespace SimulacionExamen
             this.txtTemp = new System.Windows.Forms.TextBox();
             this.btnIngresarDep = new System.Windows.Forms.Button();
             this.btnIngresarTemp = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtvDepartamentos = new System.Windows.Forms.DataGridView();
+            this.dtvTemperaturas = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.dtvNomTemp = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvDepartamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvTemperaturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvNomTemp)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,54 +114,55 @@ namespace SimulacionExamen
             this.btnIngresarTemp.UseVisualStyleBackColor = true;
             this.btnIngresarTemp.Click += new System.EventHandler(this.btnIngresarTemp_Click);
             // 
-            // dataGridView1
+            // dtvDepartamentos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(279, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(541, 207);
-            this.dataGridView1.TabIndex = 10;
+            this.dtvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvDepartamentos.Location = new System.Drawing.Point(279, 28);
+            this.dtvDepartamentos.Name = "dtvDepartamentos";
+            this.dtvDepartamentos.RowHeadersWidth = 51;
+            this.dtvDepartamentos.RowTemplate.Height = 24;
+            this.dtvDepartamentos.Size = new System.Drawing.Size(541, 207);
+            this.dtvDepartamentos.TabIndex = 10;
             // 
-            // dataGridView2
+            // dtvTemperaturas
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(279, 241);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(541, 207);
-            this.dataGridView2.TabIndex = 11;
+            this.dtvTemperaturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvTemperaturas.Location = new System.Drawing.Point(279, 252);
+            this.dtvTemperaturas.Name = "dtvTemperaturas";
+            this.dtvTemperaturas.RowHeadersWidth = 51;
+            this.dtvTemperaturas.RowTemplate.Height = 24;
+            this.dtvTemperaturas.Size = new System.Drawing.Size(541, 207);
+            this.dtvTemperaturas.TabIndex = 11;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1, 512);
+            this.button1.Location = new System.Drawing.Point(12, 513);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
+            this.button1.Text = "Mostrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView3
+            // dtvNomTemp
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(279, 467);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(541, 207);
-            this.dataGridView3.TabIndex = 13;
+            this.dtvNomTemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvNomTemp.Location = new System.Drawing.Point(279, 475);
+            this.dtvNomTemp.Name = "dtvNomTemp";
+            this.dtvNomTemp.RowHeadersWidth = 51;
+            this.dtvNomTemp.RowTemplate.Height = 24;
+            this.dtvNomTemp.Size = new System.Drawing.Size(541, 207);
+            this.dtvNomTemp.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1500, 704);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dtvNomTemp);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtvTemperaturas);
+            this.Controls.Add(this.dtvDepartamentos);
             this.Controls.Add(this.btnIngresarTemp);
             this.Controls.Add(this.btnIngresarDep);
             this.Controls.Add(this.txtTemp);
@@ -173,9 +174,9 @@ namespace SimulacionExamen
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvDepartamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvTemperaturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvNomTemp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,10 +192,10 @@ namespace SimulacionExamen
         private System.Windows.Forms.TextBox txtTemp;
         private System.Windows.Forms.Button btnIngresarDep;
         private System.Windows.Forms.Button btnIngresarTemp;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtvDepartamentos;
+        private System.Windows.Forms.DataGridView dtvTemperaturas;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dtvNomTemp;
     }
 }
 

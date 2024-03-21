@@ -15,6 +15,7 @@ namespace SimulacionExamen
     {
         List<clsDepartamento> departamento = new List<clsDepartamento>();
         List<clsTemperatura> temperatura = new List<clsTemperatura>();
+        List<clsNombreTemp> temperatura2 = new List<clsNombreTemp>();
         public Form1()
         {
             InitializeComponent();
@@ -33,14 +34,8 @@ namespace SimulacionExamen
             departamento.Add(departamentos);
             guardarDep();
             mostrarDep();
-            limpieza();
         }
-        void limpieza()
-        {
-            txtNoidentificacion.Clear();
-            txtNomDep.Clear();
-            txtNoidentificacion.Focus();
-        }
+
         private void btnIngresarTemp_Click(object sender, EventArgs e)
         {
             clsTemperatura temperaturas = new clsTemperatura();
@@ -49,9 +44,11 @@ namespace SimulacionExamen
             temperatura.Add(temperaturas);
             guardarTemp();
             mostrarTemp();
+            limpieza2();
         }
         void limpieza2()
         {
+            txtNomDep.Clear();
             txtNoidentificacion.Clear();
             txtTemp.Clear();
             txtNoidentificacion.Focus();
@@ -73,9 +70,9 @@ namespace SimulacionExamen
         }
         void mostrarDep()
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = departamento;
-            dataGridView1.Refresh();
+            dtvDepartamentos.DataSource = null;
+            dtvDepartamentos.DataSource = departamento;
+            dtvDepartamentos.Refresh();
         }
         public void guardarTemp()
         {
@@ -94,9 +91,31 @@ namespace SimulacionExamen
         }
         void mostrarTemp()
         {
-            dataGridView2.DataSource = null;
-            dataGridView2.DataSource = temperatura;
-            dataGridView2.Refresh();
+            dtvTemperaturas.DataSource = null;
+            dtvTemperaturas.DataSource = temperatura;
+            dtvTemperaturas.Refresh();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            foreach (clsDepartamento departamentos in departamento)
+            {
+                clsTemperatura temp = temperatura.FirstOrDefault(p => p.NoIdentificacion == departamentos.NoIdentificacion);
+                if(temperatura != null)
+                {
+                    clsNombreTemp reporte = new clsNombreTemp
+                    {
+                        Nombre = departamentos.Nombre,
+                        Temperatura = temp.Temperatura,
+                        
+                    };
+                    temperatura2.Add(reporte);
+                }
+            }
+            dtvNomTemp.DataSource = null;
+            dtvNomTemp.DataSource = temperatura2;
+            dtvNomTemp.Refresh();
         }
     }
 }

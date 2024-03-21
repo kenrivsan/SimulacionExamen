@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsDepartamento.cs" />
+    <Compile Include="clsNombreTemp.cs" />
     <Compile Include="clsTemperatura.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
